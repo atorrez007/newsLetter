@@ -38,7 +38,7 @@ const SignUp = () => {
         </div>
       </div>
       <div className="right-sided-content">
-        <h1 className="text">Right sided content</h1>
+        <h1 className="text"></h1>
       </div>
     </div>
   );

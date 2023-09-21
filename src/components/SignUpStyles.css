@@ -44,12 +44,15 @@
   display: flex;
   flex-direction: column;
   margin-left: 1em;
+  /* border: 1px red solid; */
+  padding: 0.5em;
   font-family: RobotoRegular;
 }
 
 .bullet-points {
   display: flex;
   /* border: 1px red solid; */
+  margin-bottom: -1em;
 }
 .right-sided-content {
   /* border: 1px red solid; */
@@ -65,5 +68,5 @@
   height: 1.3em;
   /* border: 1px black solid; */
   margin-top: 0.7em;
-  margin-right: 0.5em;
+  margin-right: 0.8em;
 }
