@@ -1,7 +1,69 @@
 .signup-box {
+  display: flex;
   height: 65vh;
   width: 85vh;
   background-color: white;
   margin-top: 8rem;
   border-radius: 35px;
+}
+
+/* .roboto-font {
+  font-family: RobotoRegular;
+}
+.roboto-bold {
+  font-family: RobotoBold;
+} */
+
+.left-sided-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px red solid; */
+  width: 50%;
+  height: 100%;
+  padding: 1em 2em -1em 1em;
+}
+
+.left-sided-header {
+  font-family: RobotoBold;
+  margin-top: 4rem;
+  margin-right: 1em;
+  font-size: 45px;
+  /* border: 1px red solid; */
+}
+
+.left-sided-paragraph {
+  margin-left: 1em;
+  word-break: none;
+  width: 90%;
+  margin-top: -1.8rem;
+}
+
+.bullet-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  font-family: RobotoRegular;
+}
+
+.bullet-points {
+  display: flex;
+  /* border: 1px red solid; */
+}
+.right-sided-content {
+  /* border: 1px red solid; */
+  width: 50%;
+  height: 100%;
+}
+
+.textRegular {
+  font-family: RobotoRegular;
+}
+
+.icon-style {
+  height: 1.3em;
+  /* border: 1px black solid; */
+  margin-top: 0.7em;
+  margin-right: 0.5em;
 }
