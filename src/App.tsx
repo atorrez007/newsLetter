@@ -1,10 +1,10 @@
 import "./App.css";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Newsletter Sign-Up</h1>
-      <p>Pushing to Vercel Test</p>
+    <div className="signup-container">
+      <SignUp />
     </div>
   );
 }
