@@ -1,6 +1,7 @@
 import successIcon from "../assets/images/icon-success.svg";
 import desktopImage from "../assets/images/illustration-sign-up-desktop.svg";
 import "./SignUpStyles.css";
+
 const SignUp = () => {
   return (
     <div className="signup-box">
