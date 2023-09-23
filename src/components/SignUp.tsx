@@ -1,14 +1,15 @@
 import successIcon from "../assets/images/icon-success.svg";
+import desktopImage from "../assets/images/illustration-sign-up-desktop.svg";
 import "./SignUpStyles.css";
 const SignUp = () => {
   return (
     <div className="signup-box">
       <div className="left-sided-content">
-        <h1 className="left-sided-header">Stay updated!</h1>
+        <div className="left-sided-header">
+          <h1>Stay updated!</h1>
+        </div>
         <div className="left-sided-paragraph">
-          <p className="textRegular">
-            Join 60,000+ product managers receiving monthly updates on:
-          </p>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
         </div>
         <div className="bullet-section">
           <div className="bullet-points">
@@ -36,9 +37,27 @@ const SignUp = () => {
             <p>And much more!</p>
           </div>
         </div>
+        <div className="interactive-content">
+          <p>
+            <strong>Email address</strong>
+          </p>
+          <div className="input-container">
+            <input
+              className="input-styles"
+              placeholder="email@company.com"
+            ></input>
+          </div>
+          <div className="button-container">
+            <button className="button-styles">
+              <strong>Subscribe to monthly newsletter</strong>
+            </button>
+          </div>
+        </div>
       </div>
       <div className="right-sided-content">
-        <h1 className="text"></h1>
+        <div className="img-container">
+          <img src={desktopImage} alt="desktop-artwork" />
+        </div>
       </div>
     </div>
   );
