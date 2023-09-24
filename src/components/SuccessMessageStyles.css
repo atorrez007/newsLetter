@@ -55,7 +55,7 @@
   line-height: 1.5em;
 }
 
-.interactive-content {
+.success-interactive-content {
   margin-top: 1em;
   display: flex;
   /* border: 1px red solid; */
@@ -63,7 +63,7 @@
   height: 2.5em;
 }
 
-.button-styles {
+.success-button-styles {
   width: inherit;
   height: inherit;
   border-radius: 6px;
@@ -73,7 +73,7 @@
   color: white;
 }
 
-.button-styles:hover {
+.success-button-styles:hover {
   width: inherit;
   height: inherit;
   border-radius: 6px;

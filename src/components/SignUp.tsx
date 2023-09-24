@@ -48,8 +48,8 @@ const SignUp = () => {
               placeholder="email@company.com"
             ></input>
           </div>
-          <div className="button-container">
-            <button className="button-styles">
+          <div className="signup-button-container">
+            <button className="signup-button-styles">
               <strong>Subscribe to monthly newsletter</strong>
             </button>
           </div>

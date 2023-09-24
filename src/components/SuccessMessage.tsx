@@ -14,13 +14,13 @@ const SuccessMessage = () => {
         </div>
         <div className="description-content">
           <p>
-            A confirmation has been sent to <strong>address@email.com.</strong>
+            A confirmation has been sent to <strong>address@email.com. </strong>
             Please open it and click the button inside to confirm your
             subscription.
           </p>
         </div>
-        <div className="interactive-content">
-          <button className="button-styles">Dismiss Message</button>
+        <div className="success-interactive-content">
+          <button className="success-button-styles">Dismiss Message</button>
         </div>
       </div>
     </div>
