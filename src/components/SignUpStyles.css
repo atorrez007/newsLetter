@@ -24,6 +24,7 @@
   margin-right: 2em;
   font-size: 24px;
   color: hsl(237.39deg 17.29% 26.08%);
+
   /* border: 1px red solid; */
 }
 
@@ -110,21 +111,6 @@
   cursor: pointer;
   outline: none;
 }
-/* 
-.input-styles {
-  margin-left: 2.6em;
-  height: 70%;
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid gray;
-  padding: 0 0 0 1em;
-  font-family: RobotoRegular;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-  color: rgb(241, 83, 83);
-  background-color: rgb(210, 162, 162);
-} */
 
 .signup-button-container {
   display: flex;
@@ -144,7 +130,7 @@
   color: white;
 }
 
-.button-styles:hover {
+.signup-button-styles:hover {
   margin-left: 2.6em;
   height: 70%;
   width: 100%;
@@ -157,13 +143,6 @@
   cursor: pointer;
 }
 
-/* .img-container {
-  border: 1px solid black;
-  height: 95%;
-  width: 90%;
-  border-radius: 18px;
-} */
-
 .img-styles {
   background-size: cover;
 }
@@ -173,6 +152,113 @@
   margin-top: 0.1em;
   /* border: 1px solid black; */
   width: 87%;
-
   border-radius: 18px;
+}
+
+/* Mobile Design <------------------------------------------> */
+
+@media (max-width: 500px) {
+  .signup-box {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    height: auto;
+    width: 30em;
+    background-color: white;
+    margin-top: 0.1em;
+    border-radius: 18px;
+  }
+
+  .left-sided-content {
+    width: auto;
+    padding: 1em;
+
+    align-items: center;
+  }
+
+  .left-sided-header {
+    font-family: RobotoBold;
+    margin-top: 1em;
+    font-size: 20px;
+    color: hsl(237.39deg 17.29% 26.08%);
+  }
+  .left-sided-header h1 {
+    justify-content: center;
+    font-family: RobotoBold;
+    margin-top: 0.1em;
+    margin-right: 0.5em;
+    font-size: 40px;
+    color: hsl(237.39deg 17.29% 26.08%);
+    /* border: 1px red solid; */
+  }
+
+  .left-sided-paragraph {
+    margin-left: 0.1em;
+    font-family: RobotoRegular;
+    word-break: none;
+    width: 90%;
+    margin-top: -1.8rem;
+    color: hsl(237.39deg 17.29% 26.08%);
+  }
+
+  .signup-button-styles {
+    margin-left: 2.6em;
+    height: 70%;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: hsl(237.39deg 17.29% 26.08%);
+    font-family: RobotoBold;
+    color: white;
+  }
+
+  .signup-button-styles:hover {
+    margin-left: 2.6em;
+    height: 70%;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: hsl(358.52deg 98.78% 67.84%);
+    box-shadow: 0px 10px 15px 2px rgba(255, 0, 0, 0.2);
+    font-family: RobotoBold;
+    color: white;
+    cursor: pointer;
+  }
+
+  .signup-button-styles:focus {
+    margin-left: 2.6em;
+    height: 70%;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: hsl(358.52deg 98.78% 67.84%);
+    box-shadow: 0px 10px 15px 2px rgba(255, 0, 0, 0.2);
+    font-family: RobotoBold;
+    color: white;
+    cursor: pointer;
+  }
+
+  .right-sided-content {
+    width: fill;
+  }
+
+  .img-container img {
+    margin: 0em;
+    margin-bottom: -1em;
+    /* border: 1px solid black; */
+    width: inherit;
+    height: auto;
+    border-radius: 18px;
+  }
+
+  .interactive-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    width: 100%;
+    height: 100%;
+    margin-left: 0em;
+    color: hsl(237.39deg 17.29% 26.08%);
+    /* border: 1px red solid; */
+  }
 }

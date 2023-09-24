@@ -1,5 +1,6 @@
 import successIcon from "../assets/images/icon-success.svg";
 import desktopImage from "../assets/images/illustration-sign-up-desktop.svg";
+import mobileImage from "../assets/images/illustration-sign-up-mobile.svg";
 import "./SignUpStyles.css";
 
 const SignUp = () => {
