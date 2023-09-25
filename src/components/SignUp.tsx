@@ -2,8 +2,26 @@ import successIcon from "../assets/images/icon-success.svg";
 import desktopImage from "../assets/images/illustration-sign-up-desktop.svg";
 import mobileImage from "../assets/images/illustration-sign-up-mobile.svg";
 import "./SignUpStyles.css";
+import { useNavigate } from "react-router-dom";
+import { ChangeEvent, useEffect, useState } from "react";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const [address, setAddress] = useState<string | null>(null);
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setAddress(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    address ? navigate("/success") : errorFunction();
+  };
+
+  const errorFunction = () => {
+    alert("address not correct.");
+  };
+
+  useEffect(() => {}, [address]);
   return (
     <div className="signup-box">
       <div className="left-sided-content">
@@ -47,10 +65,11 @@ const SignUp = () => {
             <input
               className="input-styles"
               placeholder="email@company.com"
+              onChange={handleChange}
             ></input>
           </div>
           <div className="signup-button-container">
-            <button className="signup-button-styles">
+            <button className="signup-button-styles" onClick={handleSubmit}>
               <strong>Subscribe to monthly newsletter</strong>
             </button>
           </div>
