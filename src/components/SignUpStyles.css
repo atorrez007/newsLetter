@@ -157,7 +157,7 @@
 
 /* Mobile Design <------------------------------------------> */
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .signup-box {
     display: flex;
     flex-direction: column-reverse;
