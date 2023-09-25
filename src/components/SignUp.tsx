@@ -8,7 +8,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 const SignUp = () => {
   const navigate = useNavigate();
   const [address, setAddress] = useState<string | null>(null);
-
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setAddress(event.target.value);
   };
@@ -20,6 +20,13 @@ const SignUp = () => {
   const errorFunction = () => {
     alert("address not correct.");
   };
+
+  const updateImg = () => {
+    const width = window.innerWidth;
+    width <= 750 ? setIsMobile(true) : setIsMobile(false);
+  };
+
+  window.addEventListener("resize", updateImg);
 
   useEffect(() => {}, [address]);
   return (
@@ -77,7 +84,11 @@ const SignUp = () => {
       </div>
       <div className="right-sided-content">
         <div className="img-container">
-          <img src={desktopImage} alt="desktop-artwork" />
+          {isMobile ? (
+            <img src={mobileImage} alt="desktop-artwork" />
+          ) : (
+            <img src={desktopImage} alt="desktop-artwork" />
+          )}
         </div>
       </div>
     </div>
