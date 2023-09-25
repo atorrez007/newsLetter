@@ -185,7 +185,6 @@
   .left-sided-content {
     width: auto;
     padding: 1em;
-
     align-items: center;
   }
 
@@ -255,13 +254,16 @@
     width: stretch;
   }
 
-  .img-container img {
+  .img-container {
     margin: 0em;
-    margin-bottom: -1em;
-    /* border: 1px solid black; */
     width: inherit;
     height: auto;
     border-radius: 18px;
+  }
+
+  .img-container img {
+    margin: 0em;
+    width: stretch;
   }
 
   .interactive-content {
