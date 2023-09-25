@@ -161,7 +161,7 @@
   .signup-box {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: start;
+    justify-content: flex-start;
     height: auto;
     width: 30em;
     background-color: white;
@@ -239,7 +239,7 @@
   }
 
   .right-sided-content {
-    width: fill;
+    width: stretch;
   }
 
   .img-container img {
