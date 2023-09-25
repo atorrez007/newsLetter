@@ -2,7 +2,12 @@ import React from "react";
 import "./SuccessMessageStyles.css";
 import iconSuccess from "../assets/images/icon-success.svg";
 
-const SuccessMessage = () => {
+interface Props {
+  emailAddress: string | undefined;
+  handleComponentChild: () => void;
+}
+
+const SuccessMessage = ({ emailAddress, handleComponentChild }: Props) => {
   return (
     <div className="success-container">
       <div className="success-panel">
@@ -14,13 +19,20 @@ const SuccessMessage = () => {
         </div>
         <div className="description-content">
           <p>
-            A confirmation has been sent to <strong>address@email.com. </strong>
+            A confirmation has been sent to <strong>{emailAddress}.</strong>
             Please open it and click the button inside to confirm your
             subscription.
           </p>
         </div>
         <div className="success-interactive-content">
-          <button className="success-button-styles">Dismiss Message</button>
+          <button
+            className="success-button-styles"
+            onClick={() => {
+              handleComponentChild();
+            }}
+          >
+            Dismiss Message
+          </button>
         </div>
       </div>
     </div>
