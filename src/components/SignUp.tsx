@@ -5,7 +5,7 @@ import "./SignUpStyles.css";
 import { ChangeEvent, useState } from "react";
 import SuccessMessage from "./SuccessMessage";
 
-export interface User {
+interface User {
   emailAddress: string;
 }
 
@@ -107,7 +107,9 @@ const SignUp = () => {
         </div>
       ) : (
         <SuccessMessage
-          emailAddress={address?.emailAddress}
+          emailAddress={
+            address ? address.emailAddress : "unknown email address"
+          }
           handleComponentChild={handleComponentChange}
         />
       )}

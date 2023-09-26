@@ -3,7 +3,7 @@ import "./SuccessMessageStyles.css";
 import iconSuccess from "../assets/images/icon-success.svg";
 
 interface Props {
-  emailAddress: string | undefined;
+  emailAddress: string;
   handleComponentChild: () => void;
 }
 
@@ -19,7 +19,7 @@ const SuccessMessage = ({ emailAddress, handleComponentChild }: Props) => {
         </div>
         <div className="description-content">
           <p>
-            A confirmation has been sent to <strong>{emailAddress}.</strong>
+            A confirmation has been sent to <strong>{emailAddress}. </strong>
             Please open it and click the button inside to confirm your
             subscription.
           </p>

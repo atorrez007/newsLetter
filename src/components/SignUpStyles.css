@@ -176,7 +176,7 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     height: auto;
-    width: 30em;
+    width: 25em;
     background-color: white;
     margin-top: 0.1em;
     border-radius: 18px;
@@ -205,7 +205,7 @@
   }
 
   .left-sided-paragraph {
-    margin-left: 0.1em;
+    margin-left: 1.5em;
     font-family: RobotoRegular;
     word-break: none;
     width: 90%;
