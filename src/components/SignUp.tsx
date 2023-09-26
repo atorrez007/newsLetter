@@ -16,6 +16,7 @@ const SignUp = () => {
   const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setIsValidEmail(true);
     setAddress({ emailAddress: event.target.value });
   };
 
@@ -25,7 +26,6 @@ const SignUp = () => {
   };
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-
     setIsValidEmail(false);
     address?.emailAddress.includes("@")
       ? setIsEmailSent(true)
