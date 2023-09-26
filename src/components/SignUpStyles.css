@@ -85,11 +85,25 @@
 }
 
 .interactive-content p {
+  display: flex;
+  align-items: flex-end;
   font-family: RobotoBold;
   color: hsl(237.39deg 17.29% 26.08%);
   font-size: 12px;
   padding: 0 1em 0 3em;
   margin-bottom: 0.8em;
+  /* border: 1px red solid; */
+}
+
+.interactive-content span {
+  display: flex;
+  font-family: RobotoBold;
+  color: hsl(237.39deg 17.29% 26.08%);
+  font-size: 12px;
+  padding: 0 1em 0 3em;
+  margin-left: 11.5em;
+  color: red;
+  /* border: 1px red solid; */
 }
 
 .input-container {
@@ -110,6 +124,21 @@
   font-size: 14px;
   cursor: pointer;
   outline: none;
+}
+
+.input-styles-error {
+  margin-left: 2.6em;
+  height: 70%;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid gray;
+  padding: 0 0 0 1em;
+  font-family: RobotoRegular;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  color: rgb(241, 83, 83);
+  background-color: rgb(248, 163, 163);
 }
 
 .signup-button-container {

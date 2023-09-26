@@ -2,7 +2,7 @@ import successIcon from "../assets/images/icon-success.svg";
 import desktopImage from "../assets/images/illustration-sign-up-desktop.svg";
 import mobileImage from "../assets/images/illustration-sign-up-mobile.svg";
 import "./SignUpStyles.css";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import SuccessMessage from "./SuccessMessage";
 
 interface User {
@@ -13,6 +13,7 @@ const SignUp = () => {
   const [address, setAddress] = useState<User | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isEmailSent, setIsEmailSent] = useState<boolean>(false);
+  const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setAddress({ emailAddress: event.target.value });
@@ -20,17 +21,15 @@ const SignUp = () => {
 
   const handleComponentChange = () => {
     setIsEmailSent(false);
+    setIsValidEmail(true);
   };
-  const handleSubmit = () => {
-    try {
-      address?.emailAddress ? setIsEmailSent(true) : errorFunction();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
 
-  const errorFunction = () => {
-    alert("address not correct.");
+    setIsValidEmail(false);
+    address?.emailAddress.includes("@")
+      ? setIsEmailSent(true)
+      : setIsValidEmail(false);
   };
 
   const updateImg = () => {
@@ -80,19 +79,33 @@ const SignUp = () => {
             <div className="interactive-content">
               <p>
                 <strong>Email address</strong>
+                {!isValidEmail ? <span>Valid email required</span> : null}
               </p>
-              <div className="input-container">
-                <input
-                  className="input-styles"
-                  placeholder="email@company.com"
-                  onChange={handleChange}
-                ></input>
-              </div>
-              <div className="signup-button-container">
-                <button className="signup-button-styles" onClick={handleSubmit}>
-                  <strong>Subscribe to monthly newsletter</strong>
-                </button>
-              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="input-container">
+                  {isValidEmail ? (
+                    <input
+                      className="input-styles"
+                      placeholder="email@company.com"
+                      onChange={handleChange}
+                    ></input>
+                  ) : (
+                    <input
+                      className="input-styles-error"
+                      placeholder="email@company.com"
+                      onChange={handleChange}
+                    ></input>
+                  )}
+                </div>
+                <div className="signup-button-container">
+                  <button
+                    className="signup-button-styles"
+                    onClick={handleSubmit}
+                  >
+                    <strong>Subscribe to monthly newsletter</strong>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
           <div className="right-sided-content">
